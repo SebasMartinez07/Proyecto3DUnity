@@ -52,11 +52,12 @@ public class EnemyBehaviour : MonoBehaviour
                 }
                 break;
             case 2:
-                if (transform.position.x < -6.8f || transform.position.x > 6.8f)
+                //if (transform.position.x < -6.8f || transform.position.x > 6.8f)
+                if (transform.position.z < -10f || transform.position.z > 0.79f)
                 {
                     speedXEnemy02 *= -1;
                 }
-                transform.Translate(speedXEnemy02 * Time.deltaTime, 0f, 0f);
+                transform.Translate(0f, 0f, -speedXEnemy02 * Time.deltaTime);
                 break;
         }
     }
